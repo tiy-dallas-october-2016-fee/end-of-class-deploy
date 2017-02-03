@@ -3,6 +3,8 @@ var app = express();
 
 app.use(express.static('public'));
 
-app.listen(6754, function() {
-  console.log('Listening on port 6754.');
+var port = process.env.PORT || 6754;
+
+app.listen(port, function() {
+  console.log('Listening on port', port);
 });
